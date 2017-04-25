@@ -10,37 +10,31 @@
     <h:body>
         <h:form id="form">
             <p:growl id="msgs" showDetail="true" />
-            <p:dataTable id="dtContratantes" var="produtos" value="#{ListarProdutos.produtos}">
+            <p:dataTable id="dtContratantes" var="produto" value="#{ListarProdutos.produtos}">
                 <f:facet name="header">
-                    <p:outputPanel>
+                    <p:outputPanel  >
                         <h:outputText value="Pesquisar em todos os campos:" />
                         <p:inputText style="width:150px" placeholder="Pressione uma tecla"/>
                     </p:outputPanel>
                 </f:facet>
 
                 <p:column headerText="ID" width="10">
-                    <h:outputText value="#{produtos.id}"/>
+                    <h:outputText value="#{produto.id}"/>
                 </p:column>
-                <p:column headerText="Nome" sortBy="#{produtos.nome}" width="150"
-                          filterBy="#{produtos.nome}" filterMatchMode="contains">
-                    <h:outputText value="#{produtos.nome}"/>
+                <p:column headerText="Nome" sortBy="#{produto.nome}" width="150"
+                          filterBy="#{produto.nome}" filterMatchMode="contains">
+                    <h:outputText value="#{produto.nome}"/>
                 </p:column>
                 <p:column headerText="Descrição" width="100">
-                    <h:outputText value="#{produtos.descricao}"/>
-                </p:column>
-
-                <p:column headerText="Categoria" width="30">
-                    <h:outputText value="#{produtos.categoria}"/>
+                    <h:outputText value="#{produto.descricao}"/>
                 </p:column>
 
                 <p:column headerText="Quant" width="30">
-                    <h:outputText value="#{produtos.quantidade}"/>
+                    <h:outputText value="#{produto.quantidade}"/>
                 </p:column>
 
-                <p:column headerText="Preço unt." width="30">
-                </p:column>
                 <f:facet name="footer">
-                    No total temos #{ListarProdutos.produtos.size()} Produtos.
+                    No total temos #{ListarProdutos.produtos.size()} Produto.
                 </f:facet>
             </p:dataTable>
 

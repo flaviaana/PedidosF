@@ -23,15 +23,15 @@ import org.Pedidos.modelo.Produto;
 public class ListarProdutosBean {
     @Inject
     private ProdutoDAO dao;
-    private List<Produto> produtos;
+    private List<Produto> produto;
 
     @PostConstruct
     private void init(){
-        this.produtos = dao.buscarTodos();
+        this.produto = dao.buscarTodos();
     }
     
     public List<Produto> getProdutos() {
-        return produtos;
+        return produto;
     }
     
 }
