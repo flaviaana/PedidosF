@@ -1,173 +1,36 @@
-<!--<?xml version="1.0" encoding="UTF-8"?>
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"  
+             xmlns:h="http://java.sun.com/jsf/html"    
+             xmlns:p="http://primefaces.org/ui"
+             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+             template="template.xhtml"
+             xmlns:f="http://xmlns.jcp.org/jsf/core">  
 
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>TODO supply a title</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
-</html>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:p="http://primefaces.org/ui">
-
-<h:head>
-	<title>Cadastro</title>
-	<link rel="stylesheet" href="CSS/style.css"/> 
-</h:head>
-
-<h:body>
-
-	<div id="login-dialog">
-		<h1>Cadastro</h1>
-		
-		<h:form id="frm">
-			<p:messages autoUpdate="true" />
-	
-			<h:panelGrid columns="2" styleClass="grid-login">
-                            
-                                <p:outputLabel value="Descrição" for="descricao" />
-                                <p:inputText id="descricao" size="20" value="#{cadastrarProdutoBean.produto.descricao}" />
-				
-				<p:outputLabel value="Senha" for="senha" />
-				<p:inputText id="senha" size="20" value="#{loginBean.senha}" />
-                                <p:outputLabel value="Nome" for="nome" />
-                                <p:inputText id="nome" size="20" value="#{loginBean.senha}" />
-                                <p:outputLabel value="E-mail" for="e-mail" />
-                                <p:inputText id="e-mail" size="20" value="#{loginBean.senha}" />
-                                <p:outputLabel value="Contato" for="contato" />
-                                <p:inputText id="contato" size="20" value="#{loginBean.senha}" />
-				
-				<p:outputLabel />
-                                <p:commandButton value="Cadastrar" action="#{cadastrarProdutoBean.adicionar()}" />
-                                
-                                
-			</h:panelGrid>
-		</h:form>
-	</div>
-	
-</h:body>
-
-</html>-->
-<!DOCTYPE HTML>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Sistema de Estoque</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
-	<body>
-
-	<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
-
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">EStoque</span>
-								</a>
-
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
-
-						</div>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.xhtml">Home</a></li>
-							<li><a href="cadastro.xhtml">Cadastro</a></li>
-							<li><a href="generic.html">Tempus etiam</a></li>
-							<li><a href="generic.html">Consequat dolor</a></li>
-							<li><a href="elements.html">Elements</a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<header>
-								
-							</header>
-							<section class="tiles">
-				
-							</section>
-						</div>
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="field half first">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="field half">
-										<input type="email" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="field">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="special" /></li>
-									</ul>
-								</form>
-							</section>
-							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>	
-
-	</body>
-</html>
+    <ui:define name="conteudo">
+        <section>
+            <h2>Get in touch</h2>
+            <h:form>
+                <div class="field half first">
+                    <!--<input type="text" name="name" id="name" placeholder="Name" />-->
+                    <h:inputText value="#{cadastrarProdutoBean.produto.nome}"/>
+                </div>
+                <div class="field half">
+                    <!--<input type="email" name="email" id="email" placeholder="Email" />-->
+                    <h:inputText value="#{cadastrarProdutoBean.produto.descricao}"/>
+                </div>
+                <div class="field half first">
+                    <!--<input type="email" name="email" id="email" placeholder="Email" />-->
+                    <h:inputText value ="#{cadastrarProdutoBean.produto.preco}" />
+                </div>
+                <div class="field half">
+                    <!--<input type="email" name="email" id="email" placeholder="Email" />-->
+                    <h:inputText  value="#{cadastrarProdutoBean.produto.quantidade}" />
+                </div>
+                <ul class="actions">
+                    <li>
+                        <h:commandButton action="#{cadastrarProdutoBean.adicionar()}" value="Cadastrar"/>
+                    </li>
+                </ul>
+            </h:form>
+        </section>
+    </ui:define>
+</ui:decorate> 
